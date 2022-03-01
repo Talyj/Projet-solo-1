@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnObstacle : MonoBehaviour
+public class SpawnObstacleBis : MonoBehaviour
 {
     [SerializeField] private GameObject[] obstacles;
     private float xPos, yPos, zPos = 0;
@@ -17,10 +17,7 @@ public class SpawnObstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isDetected)
-        {
-            Spawn();
-        }
+        Spawn();
     }
 
     public void Spawn()
@@ -46,18 +43,6 @@ public class SpawnObstacle : MonoBehaviour
             }
             Instantiate(obstacles[value], new Vector3(xPos, yPos, zPos), Quaternion.identity);
             cpt = 0.5f;
-        }
-    }
-
-    public void ChangeDetection()
-    {
-        if (isDetected)
-        {
-            isDetected = false;
-        }
-        else
-        {
-            isDetected = true;
         }
     }
 }

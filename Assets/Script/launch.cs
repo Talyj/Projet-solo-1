@@ -127,7 +127,7 @@ public class launch : MonoBehaviour {
 
 		if (triggered) {
 			shotTime += Time.deltaTime;
-			if (shotTime > 5.0f) {
+			if (shotTime > 2.0f) {
 				transform.localPosition = init_pos;
 				rbGO.Sleep ();
 				rbGO.useGravity = false;
